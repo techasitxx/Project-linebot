@@ -1,6 +1,6 @@
 <?php
 $API_URL = 'https://api.line.me/v2/bot/message/reply';
-$ACCESS_TOKEN = 'jqcef/Cwv9mlugBqub57sx4Pa+LcB4wGBtf9f92NLuFqEN92x/g4M9Mj1j+DILZWgzCdj11gRgSVbTt3cTjOf+xNKgXrBmDylAor1n7fOb64X90b+VSD+c/K3ylq3UidMhttW8aJjZBvgk9hEhdNlgdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
+$ACCESS_TOKEN = '8TgTurIH7S0Y/HhxIVn/0+IQQx4o6e3yngIrqTQA0q77ZZVnCKUMRbjAlQ7ULQ4A42KE9KJqB7mD1FAajepmrXg8crtSjCctWY1/OjCpSD90NzjWXTS8Njf65ut2udxmmIgNxhXM5oK8j/khuCKjfwdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
@@ -39,5 +39,4 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
-echo "OK";
 ?>
