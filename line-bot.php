@@ -17,9 +17,8 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "video";
-    "originalContentUrl": "https://example.com/original.mp4",
-    "previewImageUrl": "https://example.com/preview.jpg"
-  //  $arrPostData['messages'][0]['text'] = "เราชื่อบอท";
+   
+    $arrPostData['messages'][0]['text'] = "เราชื่อบอท";
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
