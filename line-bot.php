@@ -16,9 +16,9 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "sticker";
-     
-    $arrPostData['messages'][0]['stickerId'] = "1";
+    $arrPostData['messages'][1]['type'] = "sticker";
+    $arrPostData['messages'][1]['packageId'] = "1";
+    $arrPostData['messages'][1]['stickerId'] = "15";
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
