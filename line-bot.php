@@ -1,5 +1,6 @@
 <?php
-    $accessToken = "";//copy Channel access token ตอนที่ตั้งค่ามาใส่
+    $accessToken = "k4AQCiHmmN9atbeijD7JGQ5hJrEKPTtKLe4DY1cE3Mg6cJdg7w4nDZGNfbUyyYFJ42KE9KJqB7mD1FAajep
+    mrXg8crtSjCctWY1/OjCpSD+w6yo3f/0P+PI3yzYuSx73MWxxQalQS08VRdrjzPn3WAdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
     $content = file_get_contents('php://input');
     $arrayJson = json_decode($content, true);
