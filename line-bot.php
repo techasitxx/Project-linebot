@@ -56,9 +56,10 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     else{
+    $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
     $arrayPostData['messages'][0]['type'] = "text";
     $arrayPostData['messages'][0]['text'] = "อะไรของมึงว่ะ";
-    
+    replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
