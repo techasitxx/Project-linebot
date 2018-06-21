@@ -16,9 +16,9 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "video";
-    "originalContentUrl": "https://example.com/original.mp4"   
-    //$arrPostData['messages'][0]['text'] = "เราชื่อบอท";
+    $arrPostData['messages'][0]['type'] = "sticker";
+     
+    $arrPostData['messages'][0]['stickerId'] = "1";
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
