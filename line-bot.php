@@ -59,6 +59,7 @@
     $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
     $arrayPostData['messages'][0]['type'] = "text";
     $arrayPostData['messages'][0]['text'] = "อะไรของมึงว่ะ";
+    $arrayPostData['messages'][1]['type'] = "skicter";
     $arrayPostData['messages'][1]['packageId'] = "1";
     $arrayPostData['messages'][1]['stickerId'] = "17";
     replyMsg($arrayHeader,$arrayPostData);
