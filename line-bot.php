@@ -13,13 +13,15 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
     $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
-    $arrPostData = array();
-    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][1]['type'] = "sticker";
-    $arrPostData['messages'][1]['packageId'] = "1";
-    $arrPostData['messages'][1]['stickerId'] = "15";
-    replyMsg($arrayHeader,$arrayPostData);
+
+}else if($message == "ลาก่อน"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "อย่าทิ้งกันไป";
+        $arrayPostData['messages'][1]['type'] = "sticker";
+        $arrayPostData['messages'][1]['packageId'] = "1";
+        $arrayPostData['messages'][1]['stickerId'] = "131";
+        
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
