@@ -19,6 +19,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData['messages'][1]['type'] = "sticker";
     $arrPostData['messages'][1]['packageId'] = "1";
     $arrPostData['messages'][1]['stickerId'] = "15";
+    replyMsg($arrayHeader,$arrayPostData);
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
