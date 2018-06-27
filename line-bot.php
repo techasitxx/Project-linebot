@@ -19,7 +19,7 @@ if (sizeof($request_array['events']) > 0) {
                 $text = $event['message']['text'];
                 if (strpos($text,'กี่รุ่น') !== false) {
                     $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
-                } else if ($text == 'กี่รุ่นYaris') {
+                } else if (strpos($text, 'กี่รุ่นYaris')!== false) {
                     $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
                 } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
