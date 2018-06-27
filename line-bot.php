@@ -17,7 +17,7 @@ if (sizeof($request_array['events']) > 0) {
         if ($event['type'] == 'message') {
             if ($event['message']['type'] == 'text') {
                 $text = $event['message']['text'];
-   $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
+//                $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
                 if ($text == 'รถมีทั้งหมดกี่รุ่น') {
                     $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
                 } else if ($text == 'Yaris') {
@@ -39,7 +39,7 @@ if (sizeof($request_array['events']) > 0) {
 //            $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
             $reply_message = json_encode($event);
         }
-        $reply_message = $request_profile_data;
+//        $reply_message = $request_profile_data;
         if (strlen($reply_message) > 0) {
             //$reply_message = iconv("tis-620","utf-8",$reply_message);
             $data = [
