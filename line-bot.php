@@ -39,8 +39,8 @@ if (sizeof($request_array['events']) > 0) {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => ['type' => 'image',
-                        'originalContentUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
-                        'previewImageUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+                        'originalContentUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2.jpg',
+                        'previewImageUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2.jpg',
                         'animated' => false
                         ]];
                 }
