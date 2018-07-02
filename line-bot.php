@@ -43,6 +43,15 @@ if (sizeof($request_array['events']) > 0) {
                             'stickerId' => '2584'
                         ]]
                     ];
+                } else if ($text == 'video'){
+                    $data = [
+                        'replyToken' => $reply_token,
+                    'messages' => [[
+                        'type' => 'video',
+                        'originalContentUrl' => 'https://example.com/original.mp4',
+                        'previewImageUrl' => 'https://example.com/preview.jpg'
+                    ]]
+                    ];
                 }
             }
 
