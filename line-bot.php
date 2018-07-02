@@ -77,7 +77,7 @@ if (sizeof($request_array['events']) > 0) {
                       'replyToken' => $reply_token,
                     'messages' => [[
                         'type' => 'imagemap',
-                        'baseUrl' => 'https://i.stack.imgur.com/hXJSC.png',
+                        'baseUrl' => 'http://www.brikit.com/download/attachments/9503637/ImageMap.001.png',
                         'altText' => 'This is an imagemap',
                         'baseSize' => [
                             'width' => 1040,
