@@ -25,7 +25,9 @@ if (sizeof($request_array['events']) > 0) {
                     } else if ($text == 'Yaris ATIV') {
                         $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
                     }
-                }
+                } else {
+                $reply_message = json_encode($event).'';
+            }
             }
          else if ($event['type'] == 'join') {
             $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^ ';
