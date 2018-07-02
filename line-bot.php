@@ -1,5 +1,5 @@
 <?php
-$ACCESS_TOKEN = 'h3WFzXBcxlimXzXnw3748uPscxBAVo9nD+Qks4s8GtCFQ8ZL77ulh2ysZQ1IR/qY42KE9KJqB7mD1FAajepmrXg8crtSjCctWY1/OjCpSD9PFtsyN6SvFbOYBzb3f4zf2yRI3Mxw431vC2w43fJdSwdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
+$ACCESS_TOKEN = '0fL1Khcuk0dSiibaDM+CVl84cs4aaHIuh7VPLOmeghEhjw7mmIIvXvO+g6hRbSAI42KE9KJqB7mD1FAajepmrXg8crtSjCctWY1/OjCpSD96vVmR+99q6QVF6bq9Yz/O8h03u6JZXeQwD0XtqEg5uwdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 // API URL for reply message to user.
 $API_REPLY_URL = 'https://api.line.me/v2/bot/message/reply';
@@ -13,24 +13,31 @@ if (sizeof($request_array['events']) > 0) {
         $request_profile_data = request_profile($API_PROFILE_URL, $POST_HEADER);
         // Reply message conditions
         $reply_message = '';
+
         $reply_token = $event['replyToken'];
         if ($event['type'] == 'message') {
             if ($event['message']['type'] == 'text') {
                 $text = $event['message']['text'];
                 if (strpos($text,'กี่รุ่น') !== false) {
-                    $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
-                } else if (strpos($text, 'กี่รุ่นYaris')!== false) {
-                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
-                } else if ($text == 'Yaris ATIV') {
-                    $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
-                } else {
-//                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
-                    $reply_message = json_encode($event) . ' ';
+                        $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
+                    } else if (strpos($text, 'กี่รุ่นYaris')!== false) {
+                        $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
+                    } else if ($text == 'Yaris ATIV') {
+                        $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
+                    } else if ($text == 'text'){
+                    $data = [
+                    $reply_message => [[
+                        'type' => 'image',
+                        'originalContentUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+                        'previewImageUrl'=> 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+                        'animated'=> false]]
+                        ];
                 }
-            } else {
-                $reply_message = json_encode($event);
+                }   else {
+                        $reply_message = json_encode($event);
+                        }
             }
-        } else if ($event['type'] == 'join') {
+         else if ($event['type'] == 'join') {
             $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^ ';
         } else if ($event['type'] == 'leave') {
             $reply_message = 'ขอบคุณที่ให้ผมได้พบกับทุกท่าน ลาก่อนครับ';
@@ -39,18 +46,18 @@ if (sizeof($request_array['events']) > 0) {
             $reply_message = json_encode($event);
         }
 //        $reply_message = $request_profile_data;
-        if (strlen($reply_message) > 0) {
+//        if (strlen($reply_message) > 0) {
             //$reply_message = iconv("tis-620","utf-8",$reply_message);
-            $data = [
-                'replyToken' => $reply_token,
+//            $data = [
+//                'replyToken' => $reply_token,
                 // Text
-                'messages' => [['type' => 'text', 'text' => $reply_message]]
+//                'messages' => [['type' => 'text', 'text' => $reply_message]]
             // Multi-Text
 //                'messages' => [
 //                    ['type' => 'text', 'text' => $reply_message],
 //                    ['type' => 'text', 'text' => 'ทดสอบ'],
 //                ],
-                // Image
+                   // Image
 //                'messages' => [[
 //                    'type' => 'image',
 //                    'originalContentUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
@@ -95,11 +102,11 @@ if (sizeof($request_array['events']) > 0) {
 //                                'text' => 'ตอบแบบสอบถามเพื่อการพัฒนาที่ดียิ่งขึ้น',
 //                            ]
 //                    ]]
-            ];
+//            ];
             $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
             $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
             echo "Result: " . $send_result . "\r\n";
-        }
+//        }
     }
 }
 echo "OK";
