@@ -24,13 +24,23 @@ if (sizeof($request_array['events']) > 0) {
                     $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
                 } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
-                } else {
-//                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
-                    $reply_message = json_encode($event) . ' ';
+                } else if($text == 'image'){
+                    $data = [
+                        'replyToken' => $reply_token,
+                        'messages' => [[
+                            'type' => 'image',
+                            'originalContentUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+                            'previewImageUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+                            'animated' => false
+                        ]]
+                    ];
+                    $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+                    $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
+                    echo "Result: " . $send_result . "\r\n";
                 }
-            } else {
-                $reply_message = json_encode($event);
+
             }
+
         } else if ($event['type'] == 'join') {
             $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^ ';
         } else if ($event['type'] == 'leave') {
