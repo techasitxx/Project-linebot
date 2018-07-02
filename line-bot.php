@@ -63,8 +63,8 @@ if (sizeof($request_array['events']) > 0) {
                 // Image
                     'messages' => [[
                     'type' => 'image',
-                    'originalContentUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2',
-                    'previewImageUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2',
+                    'originalContentUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2.jpg',
+                    'previewImageUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2.jpg',
                     'animated' => false]]
 
 //                 Sticker
