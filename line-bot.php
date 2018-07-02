@@ -78,6 +78,7 @@ if (sizeof($request_array['events']) > 0) {
                     'messages' => [[
                         'type' => 'imagemap',
                         'baseUrl' => 'http://www.brikit.com/download/attachments/9503637/ImageMap.001.png',
+                        'altText' => 'This is an imagemap',
                         'baseSize' => [
                             'width' => 1040,
                             'height' => 1040
