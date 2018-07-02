@@ -48,9 +48,16 @@ if (sizeof($request_array['events']) > 0) {
                         'replyToken' => $reply_token,
                     'messages' => [[
                         'type' => 'video',
-                        'originalContentUrl' => 'https://example.com/original.mp4',
-                        'previewImageUrl' => 'https://example.com/preview.jpg'
+                        'originalContentUrl' => 'https://www.youtube.com/watch?v=C0DPdy98e4c',
+                        'previewImageUrl' => 'https://www.youtube.com/watch?v=C0DPdy98e4c'
                     ]]
+                    ];
+                } else if ($text == 'audio') {
+                    $data = [
+                        'replyToken' => $reply_token,
+                        'messages' => [[
+
+                        ]]
                     ];
                 }
             }
