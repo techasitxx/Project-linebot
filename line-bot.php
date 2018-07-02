@@ -80,8 +80,7 @@ if (sizeof($request_array['events']) > 0) {
                         'baseUrl' => 'https://www.picz.in.th/images/2018/07/02/NBr08Z.png',
                         'altText' => 'This is an imagemap',
                         'baseSize' => [
-                            'width' => 1040,
-                            'height' => 880
+                            'width' => 1040
                         ],
                         'actions' => [
                             [
