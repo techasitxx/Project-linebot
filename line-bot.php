@@ -61,6 +61,17 @@ if (sizeof($request_array['events']) > 0) {
                         'duration' => 60000
                     ]]
                     ];
+                } else if ($text == 'location') {
+                    $data = [
+                        'replyToken' => $reply_token,
+                    'messages' => [[
+                        'type' => 'location',
+                        'title' => 'My location',
+                        'address' => 'ท่าดินแดง',
+                        'latitude' => 13.7354462,
+                        'longitude' => 100.5034802
+                    ]]
+                    ];
                 }
             }
 
