@@ -77,7 +77,7 @@ if (sizeof($request_array['events']) > 0) {
                       'replyToken' => $reply_token,
                     'messages' => [[
                         'type' => 'imagemap',
-                        'baseUrl' => 'https://www.picz.in.th/image/NBr08Z',
+                        'baseUrl' => 'https://www.picz.in.th/images/2018/07/02/NBr08Z.png',
                         'altText' => 'This is an imagemap',
                         'baseSize' => [
                             'width' => 1040,
