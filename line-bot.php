@@ -37,9 +37,10 @@ if (sizeof($request_array['events']) > 0) {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
                 } else if ($text == 'image'){
                     $data = [
+                        'replyToken' => $reply_token,
                         'messages' => ['type' => 'image',
                         'originalContentUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
-//                        'previewImageUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+                        'previewImageUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
                         'animated' => false
                         ]];
                 }
