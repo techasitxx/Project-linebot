@@ -40,12 +40,11 @@ if (sizeof($request_array['events']) > 0) {
                     $reply_message = json_encode($event) . ' ';
                 }
             }
-        }
             else {
                 $reply_message = json_encode($event);
 
             }
-
+        }
 //        $reply_message = $request_profile_data;
 
         if (strlen($reply_message) > 0) {
