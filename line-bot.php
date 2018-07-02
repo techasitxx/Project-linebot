@@ -35,7 +35,15 @@ if (sizeof($request_array['events']) > 0) {
 
                 } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
-                } else {
+                } else if ($text == 'image'){
+                    $data = [
+                        'messages' => ['type' => 'image',
+                        'originalContentUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+                        'previewImageUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+                        'animated' => false
+                        ]];
+                }
+                else {
 //                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
                     $reply_message = json_encode($event) . ' ';
                 }
