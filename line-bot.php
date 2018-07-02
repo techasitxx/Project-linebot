@@ -1,5 +1,5 @@
 <?php
-$ACCESS_TOKEN = ''; // Access Token ค่าที่เราสร้างขึ้น
+$ACCESS_TOKEN = 'RIo/GGcvYBSob4wVvq0qHGtCClkWJOhZMnoi7eaXrQ8ZqwfkZADtYibrhwiyA9zO42KE9KJqB7mD1FAajepmrXg8crtSjCctWY1/OjCpSD8mO6DosCZLOPvs1OxKB/gTP4EjUkCYMxxCQTTOr3r8swdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 
 // API URL for reply message to user.
