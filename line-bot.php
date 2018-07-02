@@ -58,7 +58,7 @@ if (sizeof($request_array['events']) > 0) {
                     'messages' => [[
                         'type' => 'audio',
                         'originalContentUrl' => 'https://example.com/original.m4a',
-                        'duration' => null
+                        'duration' => 60000
                     ]]
                     ];
                 }
