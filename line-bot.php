@@ -77,7 +77,7 @@ if (sizeof($request_array['events']) > 0) {
                       'replyToken' => $reply_token,
                     'messages' => [[
                         'type' => 'imagemap',
-                        'baseUrl' => 'https://drive.google.com/open?id=1vWR7N0PDIB3bqIrisYhTGpoUmucJHEie',
+                        'baseUrl' => 'https://www.picz.in.th/image/NBr08Z',
                         'altText' => 'This is an imagemap',
                         'baseSize' => [
                             'width' => 1040,
