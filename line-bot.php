@@ -81,7 +81,7 @@ if (sizeof($request_array['events']) > 0) {
                         'altText' => 'This is an imagemap',
                         'baseSize' => [
                             'width' => 1040,
-                            'height' => 1040
+                            'height' => 880
                         ],
                         'actions' => [
                             [
