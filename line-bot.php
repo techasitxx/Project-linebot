@@ -72,6 +72,60 @@ if (sizeof($request_array['events']) > 0) {
                         'longitude' => 100.5034802
                     ]]
                     ];
+                } else if ($text == 'image Map'){
+                    $data = [
+                      'replyToken' => $reply_token,
+                    'messages' => [[
+                        'type' => 'imagemap',
+                        'baseUrl' => 'http://www.brikit.com/download/attachments/9503637/ImageMap.001.png',
+                        'baseSize' => [
+                            'width' => 1040,
+                            'height' => 1040
+                        ],
+                        'actions' => [
+                            [
+                                'type' => 'message',
+                                'area' => [
+                                    'x' => 3,
+                                    'y' => 1,
+                                    'width' => 524,
+                                    'height' => 431
+                                ],
+                                'text' => 'สี่เหลี่ยม'
+                            ],
+                            [
+                                'type' => 'message',
+                                'area' => [
+                                    'x' => 527,
+                                    'y' => 1,
+                                    'width' => 509,
+                                    'height' => 432
+                                ],
+                                'text' => 'สามเหลี่ยม'
+                            ],
+                            [
+                                'type' => 'message',
+                                'area' => [
+                                    'x' => 4,
+                                    'y' => 433,
+                                    'width' => 524,
+                                    'height' => 438
+                                ],
+                                'text' => 'สี่เหลี่ยมสีเขียว'
+                            ],
+                            [
+                                'type' => 'message',
+                                'area' => [
+                                    'x' => 528,
+                                    'y' => 433,
+                                    'width' => 508,
+                                    'height' => 438
+                                ],
+                                'text' => 'วงกลม'
+                            ]
+                        ]
+                    ]]
+                    ];
                 }
             }
 
