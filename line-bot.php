@@ -39,7 +39,7 @@ if (sizeof($request_array['events']) > 0) {
                     $data = [
                         'messages' => ['type' => 'image',
                         'originalContentUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
-                        'previewImageUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+//                        'previewImageUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
                         'animated' => false
                         ]];
                 }
