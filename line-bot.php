@@ -35,21 +35,11 @@ if (sizeof($request_array['events']) > 0) {
 
                 } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
-                } else if ($text == 'image'){
-                    $data = [
-                        'replyToken' => $reply_token,
-                        'messages' => ['type' => 'image',
-                        'originalContentUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2.jpg',
-                        'previewImageUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2.jpg',
-                        'animated' => false
-                        ]];
                 }
                 else {
 //                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
                     $reply_message = json_encode($event) . ' ';
                 }
-
-
             } else {
                 $reply_message = json_encode($event);
 
@@ -73,7 +63,7 @@ if (sizeof($request_array['events']) > 0) {
             $data = [
                 'replyToken' => $reply_token,
                 // Text
-                'messages' => [['type' => 'text', 'text' => $reply_message]]
+               // 'messages' => [['type' => 'text', 'text' => $reply_message]]
 
                 // Multi-Text
 //                'messages' => [
@@ -82,11 +72,11 @@ if (sizeof($request_array['events']) > 0) {
 //                ],
 
                 // Image
-//                'messages' => [[
-//                    'type' => 'image',
-//                    'originalContentUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
-//                    'previewImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
-//                    'animated' => false]]
+                    'messages' => [[
+                    'type' => 'image',
+                    'originalContentUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
+                    'previewImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
+                    'animated' => false]]
 
 //                 Sticker
 //                'messages' => [[
