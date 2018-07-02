@@ -34,11 +34,10 @@ if (sizeof($request_array['events']) > 0) {
                             'animated' => false
                         ]]
                     ];
- //                   $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-   //                 $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
-     //               echo "Result: " . $send_result . "\r\n";
                 }
-
+                $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
+                $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
+                echo "Result: " . $send_result . "\r\n";
             }
 
         } else if ($event['type'] == 'join') {
