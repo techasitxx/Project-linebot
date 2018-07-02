@@ -80,49 +80,49 @@ if (sizeof($request_array['events']) > 0) {
                         'baseUrl' => 'https://www.picz.in.th/images/2018/07/02/NBr08Z.png',
                         'altText' => 'This is an imagemap',
                         'baseSize' => [
-                            'width' => 520,
-                            'height' => 440
+                            'width' => 1040,
+                            'height' => 693
                         ],
                         'actions' => [
                             [
                                 'type' => 'message',
                                 'area' => [
                                     'x' => 3,
+                                    'y' => 0,
+                                    'width' => 517,
+                                    'height' => 345
+                                ],
+                                'text' => 'ยำแซวมอน'
+                            ],
+                            [
+                                'type' => 'message',
+                                'area' => [
+                                    'x' => 522,
                                     'y' => 1,
-                                    'width' => 524,
-                                    'height' => 431
+                                    'width' => 518,
+                                    'height' => 345
                                 ],
-                                'text' => 'สี่เหลี่ยม'
+                                'text' => 'สปาเก็ตตี้ต้มยำกุ้ง'
                             ],
                             [
                                 'type' => 'message',
                                 'area' => [
-                                    'x' => 527,
-                                    'y' => 1,
-                                    'width' => 509,
-                                    'height' => 432
+                                    'x' => 3,
+                                    'y' => 346,
+                                    'width' => 516,
+                                    'height' => 347
                                 ],
-                                'text' => 'สามเหลี่ยม'
+                                'text' => 'ต้มยำกุ้ง'
                             ],
                             [
                                 'type' => 'message',
                                 'area' => [
-                                    'x' => 4,
-                                    'y' => 433,
-                                    'width' => 524,
-                                    'height' => 438
+                                    'x' => 523,
+                                    'y' => 346,
+                                    'width' => 513,
+                                    'height' => 347
                                 ],
-                                'text' => 'สี่เหลี่ยมสีเขียว'
-                            ],
-                            [
-                                'type' => 'message',
-                                'area' => [
-                                    'x' => 528,
-                                    'y' => 433,
-                                    'width' => 508,
-                                    'height' => 438
-                                ],
-                                'text' => 'วงกลม'
+                                'text' => 'ผัดกระเพรา'
                             ]
                         ]
                     ]]
