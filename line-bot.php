@@ -45,6 +45,7 @@ if (sizeof($request_array['events']) > 0) {
    //             $reply_message = json_encode($event);
 
   //          }
+
 //        $reply_message = $request_profile_data;
 
         if (strlen($reply_message) > 0) {
@@ -63,8 +64,8 @@ if (sizeof($request_array['events']) > 0) {
                 // Image
                     'messages' => [[
                     'type' => 'image',
-                    'originalContentUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
-                    'previewImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
+                    'originalContentUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
+                    'previewImageUrl' => 'https://simg.kapook.com/o/photow/924/kapook_world-921102.jpg',
                     'animated' => false]]
 
 //                 Sticker
