@@ -45,18 +45,6 @@ if (sizeof($request_array['events']) > 0) {
    //             $reply_message = json_encode($event);
 
   //          }
-
-         else if ($event['type'] == 'join') {
-            $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^ ';
-
-        } else if ($event['type'] == 'leave') {
-            $reply_message = 'ขอบคุณที่ให้ผมได้พบกับทุกท่าน ลาก่อนครับ';
-
-        } else {
-//            $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
-            $reply_message = json_encode($event);
-        }
-
 //        $reply_message = $request_profile_data;
 
         if (strlen($reply_message) > 0) {
@@ -75,8 +63,8 @@ if (sizeof($request_array['events']) > 0) {
                 // Image
                     'messages' => [[
                     'type' => 'image',
-                    'originalContentUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
-                    'previewImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
+                    'originalContentUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2',
+                    'previewImageUrl' => 'http://image.honghongworld.com/storage/posts/2017/09/22/ownn8x3Nb2',
                     'animated' => false]]
 
 //                 Sticker
