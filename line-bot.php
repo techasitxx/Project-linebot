@@ -55,9 +55,11 @@ if (sizeof($request_array['events']) > 0) {
                 } else if ($text == 'audio') {
                     $data = [
                         'replyToken' => $reply_token,
-                        'messages' => [[
-
-                        ]]
+                    'messages' => [[
+                        'type' => 'audio',
+                        'originalContentUrl' => 'https://example.com/original.m4a',
+                        'duration' => null
+                    ]]
                     ];
                 }
             }
