@@ -138,70 +138,10 @@ if (sizeof($request_array['events']) > 0) {
 //            $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
             $reply_message = json_encode($event);
         }
-//        $reply_message = $request_profile_data;
-        if (strlen($reply_message) > 0) {
-            //$reply_message = iconv("tis-620","utf-8",$reply_message);
-            $data = [
-                'replyToken' => $reply_token,
-                // Text
-                'messages' => [['type' => 'text', 'text' => $reply_message]]
-                // Multi-Text
-//                'messages' => [
-//                    ['type' => 'text', 'text' => $reply_message],
-//                    ['type' => 'text', 'text' => 'ทดสอบ'],
-//                ],
-                // Image
-//                'messages' => [[
-//                    'type' => 'image',
-//                    'originalContentUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
-//                    'previewImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
-//                    'animated' => false]]
-//                 Sticker
-//                'messages' => [[
-//                    'type' => 'sticker',
-//                    'packageId' => '4',
-//                    'stickerId' => '623']]
-//                 Location
-//                'messages' => [[
-//                    'type' => 'location',
-//                    'title' => 'ศูนย์บริการโตโยต้าบัสส์',
-//                    'address' => '69/40 ถนนบางยี่ขัน แขวง/เขตบางกอกใหญ่ กรุงเทพ',
-//                    'latitude' => '13.840058',
-//                    'longitude' => '100.580857',
-//                ]]
-                // Template
-//                'messages' =>
-//                    [[
-//                        'type' => 'template',
-//                        'altText' => 'this is a buttons template',
-//                        'template' =>
-//                            [
-//                                'type' => 'buttons',
-//                                'actions' =>
-//                                    [
-//                                        [
-//                                            'type' => 'message',
-//                                            'label' => 'Action 1',
-//                                            'text' => 'Action 1',
-//                                        ],
-//                                        [
-//                                            'type' => 'message',
-//                                            'label' => 'Action 2',
-//                                            'text' => 'Action 2',
-//                                        ],
-//                                    ],
-//                                'thumbnailImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
-//                                'title' => 'คุณรู้สึกอย่างไรกับคลับเรา',
-//                                'text' => 'ตอบแบบสอบถามเพื่อการพัฒนาที่ดียิ่งขึ้น',
-//                            ]
-//                    ]]
-            ];
-            $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
-            $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
-            echo "Result: " . $send_result . "\r\n";
-        }
+
     }
 }
+//        $reply_message = $request_profile_data
 $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
 echo "Result: " . $send_result . "\r\n";
