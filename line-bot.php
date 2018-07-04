@@ -224,8 +224,31 @@ if (sizeof($request_array['events']) > 0) {
                                     ]
                                 ]
                             ]
-                        ]
-                        ]
+                        ]]
+                    ];
+                } else if ($text == 'ใช่ป้ะ') {
+                    $data = [
+                        'replyToken' => $reply_token,
+                        'messages' => [[
+                            'type' => 'template',
+                            'altText' => 'this is a confirm template',
+                            'template' => [
+                                'type' => 'confirm',
+                                'actions' => [
+                                    [
+                                        'type' => 'message',
+                                        'label' => 'Yes',
+                                        'text' => 'Yes'
+                                    ],
+                                    [
+                                        'type' => 'message',
+                                        'label' => 'No',
+                                        'text' => 'No'
+                                    ]
+                                ],
+                                'text' => 'Continue?'
+                            ]
+                        ]]
                     ];
                 }
             }
