@@ -127,7 +127,7 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                         ]]
                     ];
-                } else if ($text == '[บวกเท่าไหร่ดี') {
+                } else if ($text == 'บวกเท่าไหร่ดี') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
