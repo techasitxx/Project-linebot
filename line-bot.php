@@ -37,14 +37,14 @@ if (sizeof($request_array['events']) > 0) {
                 } else if ($text == 'sticker'){
                     $data = [
                         'replyToken' => $reply_token,
-                        'messages' => [[
+                        'messages' => [
                             ['type' => 'sticker',
                             'packageId' => '1',
                             'stickerId' => '2584'],
                             ['type' => 'sticker',
                             'packageId' => '1',
                             'stickerId' => '2584']
-                        ]]
+                        ]
                     ];
                 } else if ($text == 'video'){
                     $data = [
