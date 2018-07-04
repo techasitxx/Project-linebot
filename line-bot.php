@@ -274,7 +274,7 @@ if (sizeof($request_array['events']) > 0) {
                             'footer' => []
                         ]]
                     ];
-                } else if ($text == '+1') {
+                } else if ($text == 'ใช่นะ') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
