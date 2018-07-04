@@ -315,7 +315,7 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                         ]]
                     ];
-                } else if ($text == 'ใช่นะ') {
+                } else if ($text == 'กุเอง') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
