@@ -41,9 +41,8 @@ if (sizeof($request_array['events']) > 0) {
                             ['type' => 'sticker',
                             'packageId' => '1',
                             'stickerId' => '2584'],
-                            ['type' => 'sticker',
-                            'packageId' => '1',
-                            'stickerId' => '2584']
+                            ['type' => 'text',
+                            'text' => 'fluk.kuy.lek']
                         ]
                     ];
                 } else if ($text == 'video'){
