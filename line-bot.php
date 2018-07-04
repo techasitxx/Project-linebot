@@ -226,7 +226,7 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                         ]]
                     ];
-                } else if ($text == 'รถมีทั้งหมดกี่รุ่น') {
+                } else if ($text == 'รถมีกี่รุ่น') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
