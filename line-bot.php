@@ -25,13 +25,21 @@ if (sizeof($request_array['events']) > 0) {
 //                } else if ($text == 'Yaris ATIV') {
 //                    $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
 //                }
-                if ($text == 'สวัสดี'){
-                    $reply_message = $event;
-                    $reply_message [0] ['type'] = 'text';
-                    $reply_message [0]['text'] = "สวัสดีจ้าาา";
-                    $reply_message [1]['type'] = "sticker";
-                    $reply_message [1]['packageId'] = "2";
-                    $reply_message [1]['stickerId'] = "34";
+//                if ($text == 'สวัสดี'){
+//                    $reply_message [0] ['type'] = 'text';
+//                    $reply_message [0]['text'] = "สวัสดีจ้าาา";
+//                    $reply_message [1]['type'] = "sticker";
+//                    $reply_message [1]['packageId'] = "2";
+//                    $reply_message [1]['stickerId'] = "34";
+//                }
+                if($text == "สวัสดี") {
+                    $arrayPostData['to'] = $API_PROFILE_URL;
+                    $arrayPostData['messages'][0]['type'] = "text";
+                    $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
+                    $arrayPostData['messages'][1]['type'] = "sticker";
+                    $arrayPostData['messages'][1]['packageId'] = "2";
+                    $arrayPostData['messages'][1]['stickerId'] = "34";
+                    pushMsg($POST_HEADER, $arrayPostData);
                 }
                 else if ($text == 'image') {
                     $data = [
@@ -592,6 +600,20 @@ function request_profile($url, $post_header)
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return $result;
+}
+function pushMsg($POST_HEADER,$arrayPostData){
+    $strUrl = "https://api.line.me/v2/bot/message/push";
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,$strUrl);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $POST_HEADER);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrayPostData));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     $result = curl_exec($ch);
     curl_close($ch);
     return $result;
