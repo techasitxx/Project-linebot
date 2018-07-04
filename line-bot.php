@@ -242,8 +242,8 @@ if (sizeof($request_array['events']) > 0) {
                                     ],
                                     [
                                         'type' => 'message',
-                                        'label' => 'Yaris ATIV',
-                                        'text' => 'Yaris ATIV'
+                                        'label' => 'Yaris ATIV+',
+                                        'text' => 'Yaris ATIV+'
                                     ]
                                 ],
                                 'text' => 'Continue?'
@@ -469,7 +469,7 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                         ]]
                     ];
-                } else if ($text == 'Yaris ATIV') {
+                } else if ($text == 'Yaris ATIV+') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
