@@ -43,6 +43,17 @@ if (sizeof($request_array['events']) > 0) {
                             'stickerId' => '2584'
                         ]]
                     ];
+                    {
+                        $data = [
+                            'replyToken' => $reply_token,
+                            'messages' => [[
+                                'type' => 'video',
+                                'originalContentUrl' => 'https://www.youtube.com/watch?v=C0DPdy98e4c',
+                                'previewImageUrl' => 'https://www.youtube.com/watch?v=C0DPdy98e4c'
+                            ]]
+                        ];
+                    }
+
                 } else if ($text == 'video') {
                     $data = [
                         'replyToken' => $reply_token,
