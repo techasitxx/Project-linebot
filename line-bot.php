@@ -255,7 +255,6 @@ if (sizeof($request_array['events']) > 0) {
                         'replyToken' => $reply_token,
                         'messages' => [[
                             'type' => 'bubble',
-                            'direction' => 'ltr',
                             'styles' => [
                                 'header' => [
                                     'backgroundColor' => '#ffaaaa',
@@ -273,6 +272,47 @@ if (sizeof($request_array['events']) > 0) {
                             'hero' => [],
                             'body' => [],
                             'footer' => []
+                        ]]
+                    ];
+                } else if ($text == '+1') {
+                    $data = [
+                        'replyToken' => $reply_token,
+                        'messages' => [[
+                            'type' => 'bubble',
+                            'body' => [
+                                'type' => 'box',
+                                'layout' => 'vertical',
+                                'spacing' => 'md',
+                                'contents' => [
+                                    [
+                                        'type' => 'button',
+                                        'style' => 'primary',
+                                        'action' => [
+                                            'type' => 'uri',
+                                            'label' => 'Primary style button',
+                                            'uri' => 'https://developers.line.me'
+                                        ]
+                                    ],
+                                    [
+                                        'type' => 'button',
+                                        'style' => 'secondary',
+                                        'action' => [
+                                            'type' => 'uri',
+                                            'label' => 'Secondary style button',
+                                            'uri' => 'https://developers.line.me'
+                                        ]
+                                    ],
+                                    [
+                                        'type' => 'button',
+                                        'style' => 'link',
+                                        'action' => [
+                                            'type' => 'uri',
+                                            'label' => 'Link style button',
+                                            'uri' => 'https://developers.line.me'
+                                        ]
+                                    ]
+                                ]
+                            ]
                         ]]
                     ];
                 }
