@@ -38,15 +38,13 @@ if (sizeof($request_array['events']) > 0) {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
-                            'type' => 'sticker',
+                            ['type' => 'sticker',
                             'packageId' => '1',
-                            'stickerId' => '2584'
-                        ]],
-                        'messages1' => [[
-                        'type' => 'sticker',
-                        'packageId' => '1',
-                        'stickerId' => '2584'
-                    ]]
+                            'stickerId' => '2584'],
+                            ['type' => 'sticker',
+                            'packageId' => '1',
+                            'stickerId' => '2584']
+                        ]]
                     ];
                 } else if ($text == 'video'){
                     $data = [
