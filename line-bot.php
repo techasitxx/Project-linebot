@@ -19,12 +19,7 @@ if (sizeof($request_array['events']) > 0) {
                 $text = $event['message']['text'];
 //                $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
                 if ($text == 'รถมีทั้งหมดกี่รุ่น') {
-                    $data = [
-                        'relyToken' => $reply_token,
-                        'messages' => [[
-
-                        ]]
-                    ];
+                    $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
                 } else if ($text == 'Yaris') {
                     $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
                 } else if ($text == 'Yaris ATIV') {
@@ -46,12 +41,7 @@ if (sizeof($request_array['events']) > 0) {
                             'type' => 'sticker',
                             'packageId' => '1',
                             'stickerId' => '2584'
-                        ]],
-                         'messages2' => [[
-                        'type' => 'sticker',
-                        'packageId' => '1',
-                        'stickerId' => '2584'
-                    ]]
+                        ]]
                     ];
                 } else if ($text == 'video'){
                     $data = [
