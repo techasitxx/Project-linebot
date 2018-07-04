@@ -41,7 +41,12 @@ if (sizeof($request_array['events']) > 0) {
                             'type' => 'sticker',
                             'packageId' => '1',
                             'stickerId' => '2584'
-                        ]]
+                        ]],
+                        'messages1' => [[
+                        'type' => 'sticker',
+                        'packageId' => '1',
+                        'stickerId' => '2584'
+                    ]]
                     ];
                 } else if ($text == 'video'){
                     $data = [
