@@ -226,7 +226,7 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                         ]]
                     ];
-                } else if ($text == 'ใช่ป้ะ') {
+                } else if ($text == 'รถมีทั้งหมดกี่รุ่น') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
@@ -237,13 +237,13 @@ if (sizeof($request_array['events']) > 0) {
                                 'actions' => [
                                     [
                                         'type' => 'message',
-                                        'label' => 'เยอะ',
-                                        'text' => 'เยอะ'
+                                        'label' => 'Yaris',
+                                        'text' => 'Yaris'
                                     ],
                                     [
                                         'type' => 'message',
-                                        'label' => 'สายเขียว',
-                                        'text' => 'สายเขียว'
+                                        'label' => 'Yaris ATIV',
+                                        'text' => 'Yaris ATIV'
                                     ]
                                 ],
                                 'text' => 'Continue?'
