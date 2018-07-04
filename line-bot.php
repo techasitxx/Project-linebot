@@ -26,6 +26,7 @@ if (sizeof($request_array['events']) > 0) {
 //                    $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
 //                }
                 if ($text == 'สวัสดี'){
+                    $reply_message = $API_PROFILE_URL;
                     $reply_message [0] ['type'] = 'text';
                     $reply_message [0]['text'] = "สวัสดีจ้าาา";
                     $reply_message [1]['type'] = "sticker";
