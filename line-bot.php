@@ -24,7 +24,7 @@ if (sizeof($request_array['events']) > 0) {
                     $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
                 } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
-                } else if($text == 'image'){
+                } else if ($text == 'image') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
@@ -34,7 +34,7 @@ if (sizeof($request_array['events']) > 0) {
                             'animated' => false
                         ]]
                     ];
-                } else if ($text == 'sticker'){
+                } else if ($text == 'sticker') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
@@ -43,92 +43,116 @@ if (sizeof($request_array['events']) > 0) {
                             'stickerId' => '2584'
                         ]]
                     ];
-                } else if ($text == 'video'){
+                } else if ($text == 'video') {
                     $data = [
                         'replyToken' => $reply_token,
-                    'messages' => [[
-                        'type' => 'video',
-                        'originalContentUrl' => 'https://www.youtube.com/watch?v=C0DPdy98e4c',
-                        'previewImageUrl' => 'https://www.youtube.com/watch?v=C0DPdy98e4c'
-                    ]]
+                        'messages' => [[
+                            'type' => 'video',
+                            'originalContentUrl' => 'https://www.youtube.com/watch?v=C0DPdy98e4c',
+                            'previewImageUrl' => 'https://www.youtube.com/watch?v=C0DPdy98e4c'
+                        ]]
                     ];
                 } else if ($text == 'audio') {
                     $data = [
                         'replyToken' => $reply_token,
-                    'messages' => [[
-                        'type' => 'audio',
-                        'originalContentUrl' => 'https://example.com/original.m4a',
-                        'duration' => 60000
-                    ]]
+                        'messages' => [[
+                            'type' => 'audio',
+                            'originalContentUrl' => 'https://example.com/original.m4a',
+                            'duration' => 60000
+                        ]]
                     ];
                 } else if ($text == 'location') {
                     $data = [
                         'replyToken' => $reply_token,
-                    'messages' => [[
-                        'type' => 'location',
-                        'title' => 'My location',
-                        'address' => 'ท่าดินแดง',
-                        'latitude' => 13.7354462,
-                        'longitude' => 100.5034802
-                    ]]
+                        'messages' => [[
+                            'type' => 'location',
+                            'title' => 'My location',
+                            'address' => 'ท่าดินแดง',
+                            'latitude' => 13.7354462,
+                            'longitude' => 100.5034802
+                        ]]
                     ];
-                } else if ($text == 'image Map'){
+                } else if ($text == 'image Map') {
                     $data = [
-                      'replyToken' => $reply_token,
-                    'messages' => [[
-                        'type' => 'imagemap',
-                        'baseUrl' => 'https://www.picz.in.th/images/2018/07/02/NB8aWb.jpg',
-                        'altText' => 'This is an imagemap',
-                        'baseSize' => [
-                            'width' => 1040,
-                            'height' => 693
-                        ],
-                        'actions' => [
-                            [
-                                'type' => 'message',
-                                'area' => [
-                                    'x' => 3,
-                                    'y' => 0,
-                                    'width' => 517,
-                                    'height' => 345
-                                ],
-                                'text' => 'ยำแซวมอน'
+                        'replyToken' => $reply_token,
+                        'messages' => [[
+                            'type' => 'imagemap',
+                            'baseUrl' => 'https://www.picz.in.th/images/2018/07/02/NB8aWb.jpg',
+                            'altText' => 'This is an imagemap',
+                            'baseSize' => [
+                                'width' => 1040,
+                                'height' => 693
                             ],
-                            [
-                                'type' => 'message',
-                                'area' => [
-                                    'x' => 522,
-                                    'y' => 1,
-                                    'width' => 518,
-                                    'height' => 345
+                            'actions' => [
+                                [
+                                    'type' => 'message',
+                                    'area' => [
+                                        'x' => 3,
+                                        'y' => 0,
+                                        'width' => 517,
+                                        'height' => 345
+                                    ],
+                                    'text' => 'ยำแซวมอน'
                                 ],
-                                'text' => 'สปาเก็ตตี้ต้มยำกุ้ง'
-                            ],
-                            [
-                                'type' => 'message',
-                                'area' => [
-                                    'x' => 3,
-                                    'y' => 346,
-                                    'width' => 516,
-                                    'height' => 347
+                                [
+                                    'type' => 'message',
+                                    'area' => [
+                                        'x' => 522,
+                                        'y' => 1,
+                                        'width' => 518,
+                                        'height' => 345
+                                    ],
+                                    'text' => 'สปาเก็ตตี้ต้มยำกุ้ง'
                                 ],
-                                'text' => 'ต้มยำกุ้ง'
-                            ],
-                            [
-                                'type' => 'message',
-                                'area' => [
-                                    'x' => 523,
-                                    'y' => 346,
-                                    'width' => 513,
-                                    'height' => 347
+                                [
+                                    'type' => 'message',
+                                    'area' => [
+                                        'x' => 3,
+                                        'y' => 346,
+                                        'width' => 516,
+                                        'height' => 347
+                                    ],
+                                    'text' => 'ต้มยำกุ้ง'
                                 ],
-                                'text' => 'ผัดกระเพรา'
+                                [
+                                    'type' => 'message',
+                                    'area' => [
+                                        'x' => 523,
+                                        'y' => 346,
+                                        'width' => 513,
+                                        'height' => 347
+                                    ],
+                                    'text' => 'ผัดกระเพรา'
+                                ]
                             ]
-                        ]
-                    ]]
+                        ]]
+                    ];
+                } else if ($text == '[บวกเท่าไหร่ดี') {
+                    $data = [
+                        'replyToken' => $reply_token,
+                        'messages' => [[
+                            'type' => 'template',
+                            'altText' => 'this is a buttons template',
+                            'template' => [
+                                'type' => 'buttons',
+                                'actions' => [
+                                    [
+                                        'type' => 'message',
+                                        'label' => '+1',
+                                        'text' => '+1'
+                                    ],
+                                    [
+                                        'type' => 'message',
+                                        'label' => '+2',
+                                        'text' => '+2'
+                                    ]
+                                ],
+                                'title' => '+ เท่าไหร่',
+                                'text' => '+ เท่าไหร่ดี ?'
+                            ]
+                        ]]
                     ];
                 }
-            }
 
         } else if ($event['type'] == 'join') {
             $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^ ';
