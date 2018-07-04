@@ -250,6 +250,31 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                         ]]
                     ];
+                } else if ($text == 'อิอินะ') {
+                    $data = [
+                        'replyToken' => $reply_token,
+                        'messages' => [[
+                            'type' => 'bubble',
+                            'direction' => 'ltr',
+                            'styles' => [
+                                'header' => [
+                                    'backgroundColor' => '#ffaaaa',
+                                ],
+                                'body' => [
+                                    'backgroundColor' => '#aaffaa',
+                                    'separator' => true,
+                                    'separatorColor' => '#efefef'
+                                ],
+                                'footer' => [
+                                    'backgroundColor' => '#aaaaff'
+                                ]
+                            ],
+                            'header' => [],
+                            'hero' => [],
+                            'body' => [],
+                            'footer' => []
+                        ]]
+                    ];
                 }
             }
 
