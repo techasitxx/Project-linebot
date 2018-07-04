@@ -237,12 +237,12 @@ if (sizeof($request_array['events']) > 0) {
                                 'actions' => [
                                     [
                                         'type' => 'message',
-                                        'label' => 'Yes',
+                                        'label' => 'เยอะ',
                                         'text' => 'เยอะ'
                                     ],
                                     [
                                         'type' => 'message',
-                                        'label' => 'No',
+                                        'label' => 'สายเขียว',
                                         'text' => 'สายเขียว'
                                     ]
                                 ],
