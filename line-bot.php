@@ -178,6 +178,55 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                         ]]
                     ];
+                } else if ($text == 'สายเขียว') {
+                    $data = [
+                        'replyToken' => $reply_token,
+                        'messages' => [[
+                            'type' => 'template',
+                            'altText' => 'this is a carousel template',
+                            'template' => [
+                                'type' => 'carousel',
+                                'actions' => [],
+                                'columns' => [
+                                    [
+                                        'thumbnailImageUrl' => 'https://vignette.wikia.nocookie.net/tedmovie/images/5/56/Tedisreal.png/revision/latest?cb=20120712192108',
+                                        'title' => 'Title',
+                                        'text' => 'Text',
+                                        'actions' => [
+                                            [
+                                                'type' => 'message',
+                                                'label' => 'Action 1',
+                                                'text' => 'Action 1'
+                                            ],
+                                            [
+                                                'type' => 'message',
+                                                'label' => 'Action 2',
+                                                'text' => 'Action 2'
+                                            ]
+                                        ]
+                                    ],
+                                    [
+                                        'thumbnailImageUrl' => 'https://www.brandchannel.com/wp-content/uploads/2012/12/ted_movie_grocery_store.jpg',
+                                        'title' => 'Title',
+                                        'text' => 'Text',
+                                        'actions' => [
+                                            [
+                                                'type' => 'message',
+                                                'label' => 'Action 1',
+                                                'text' => 'Action 1'
+                                            ],
+                                            [
+                                                'type' => 'message',
+                                                'label' => 'Action 2',
+                                                'text' => 'Action 2'
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                        ]
+                    ];
                 }
             }
 
