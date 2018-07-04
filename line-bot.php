@@ -178,7 +178,7 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                         ]]
                     ];
-                } else if ($text == 'สายเขียว') {
+                } else if ($text == 'เยอะ') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
