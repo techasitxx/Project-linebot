@@ -152,8 +152,34 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                         ]]
                     ];
+                } else if ($text == 'สายเขียว') {
+                    $data = [
+                        'replyToken' => $reply_token,
+                        'messages' => [[
+                            'type' => 'template',
+                            'altText' => 'this is a buttons template',
+                            'template' => [
+                                'type' => 'buttons',
+                                'actions' => [
+                                    [
+                                        'type' => 'message',
+                                        'label' => '+1',
+                                        'text' => '+1'
+                                    ],
+                                    [
+                                        'type' => 'message',
+                                        'label' => '+2',
+                                        'text' => '+2'
+                                    ]
+                                ],
+                                'thumbnailImageUrl' => 'https://i.ebayimg.com/images/g/eqoAAOSwOu5Zmpq2/s-l300.jpg',
+                                'title' => '+ เท่าไหร่',
+                                'text' => '+ เท่าไหร่ดี ?'
+                            ]
+                        ]]
+                    ];
                 }
-                }
+            }
 
         } else if ($event['type'] == 'join') {
             $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^ ';
