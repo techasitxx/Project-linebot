@@ -18,13 +18,21 @@ if (sizeof($request_array['events']) > 0) {
             if ($event['message']['type'] == 'text') {
                 $text = $event['message']['text'];
 //                $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
-                if ($text == 'รถมีทั้งหมดกี่รุ่น') {
-                    $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
-                } else if ($text == 'Yaris') {
-                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
-                } else if ($text == 'Yaris ATIV') {
-                    $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
-                } else if ($text == 'image') {
+//                if ($text == 'รถมีทั้งหมดกี่รุ่น') {
+//                    $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
+//                } else if ($text == 'Yaris') {
+//                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
+//                } else if ($text == 'Yaris ATIV') {
+//                    $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
+//                }
+                if ($text == 'สวัสดี'){
+                    $reply_message [0] ['type'] = 'text';
+                    $reply_message [0]['text'] = "สวัสดีจ้าาา";
+                    $reply_message [1]['type'] = "sticker";
+                    $reply_message [1]['packageId'] = "2";
+                    $reply_message [1]['stickerId'] = "34";
+                }
+                else if ($text == 'image') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
