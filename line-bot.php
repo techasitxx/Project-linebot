@@ -129,10 +129,13 @@ if (sizeof($request_array['events']) > 0) {
                         ]
                     ]]
                     ];
-                } else if ($text == 'bubbel') {
+                } else if ($text == 'bubble') {
                     $data = [
                         'replyToken' => $reply_token,
                         'messages' => [[
+                            'type' => 'flex',
+                            'altText' => 'This is a Flex message',
+                            'contents' => [
                             'type' => 'bubble',
                             'hero' => [
                                 'type' => 'image',
@@ -142,7 +145,7 @@ if (sizeof($request_array['events']) > 0) {
                                 'aspectMode' => 'cover',
                                 'action' => [
                                     'type' => 'uri',
-                                    'uri' => 'http://linecorp.com/'
+                                    'uri' => 'http://linecorp.com'
                                 ]
                             ],
                             'body' => [
@@ -277,6 +280,7 @@ if (sizeof($request_array['events']) > 0) {
                                 ],
                                 'flex' => 0
                             ]
+                        ]
                         ]]
                         ];
                 }
